@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مدرسة موبص الثانوية للبنين</title>
+  <link rel="stylesheet" href="sstyle.css" />
+</head>
+<body>
+  <!-- زر العودة للأعلى -->
+  <button id="scrollTopBtn">⬆</button>
+
+  <!-- رأس الصفحة -->
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1 class="fade-in">مدرسة موبص الثانوية للبنين</h1>
+      <p class="fade-in">نسعى للتميز في التعليم منذ عام 1952</p>
+      <img src="mobs" alt="شعار المدرسة" class="logo fade-in">
+    </div>
+  </header>
+
+  <!-- عن المدرسة -->
+  <section id="about" class="section fade-in">
+    <h2>عن المدرسة</h2>
+    <p>
+      تأسست مدرسة موبص الثانوية للبنين عام 1952، وتعد من أبرز المدارس في لواء عين الباشا، حيث تسعى إلى إعداد جيل متميز علميًا وأخلاقيًا يساهم في بناء الوطن.
+    </p>
+  </section>
+
+  <!-- الفعاليات -->
+  <section id="events" class="section fade-in sand-bg">
+    <h2>الفعاليات</h2>
+    <ul>
+      <li>📅 افتتاح معرض العلوم السنوي</li>
+      <li>🎨 مسابقة الفنون الإبداعية</li>
+      <li>⚽ بطولة كرة القدم المدرسية</li>
+    </ul>
+  </section>
+
+  <!-- المعلمين -->
+  <section id="teachers" class="section fade-in">
+    <h2>الفريق </h2>
+    <div class="teachers">
+      <div class="teacher-card">
+        <img src="https://via.placeholder.com/150" alt="الطالب">
+        <h3>عبدالله حربي ابو عابد</h3>
+        <p>طالب من الصف التاسع</p>
+      </div>
+      <div class="teacher-card">
+        <img src="https://via.placeholder.com/150" alt="معلم">
+        <h3>الاستاذ يزن الرعوش</h3>
+        <p>مدرس المهارات الرقميه</p>
+      </div>
+      <div class="teacher-card">
+        <img src="https://via.placeholder.com/150" alt="الطالب">
+        <h3>احمد عبد الفتاح السلامات</h3>
+        <p>طالب من الصف التاسع</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- اتصل بنا -->
+  <section id="contact" class="section fade-in sand-bg">
+    <h2>اتصل بنا</h2>
+    <p>📍 العنوان: موبص - لواء عين الباشا</p>
+    <p>📞 الهاتف: 0780770153</p>
+    <p>📧 البريد الإلكتروني: abdalluhgtr@gmail.com</p>
+  </section>
+
+  <!-- تذييل -->
+  <footer>
+    <p>© 2025 مدرسة موبص الثانوية للبنين</p>
+  </footer>
+
+  <script>
+    // زر العودة للأعلى
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = function() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    };
+    scrollTopBtn.onclick = function() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+  </script>
+</body>
+</html>
