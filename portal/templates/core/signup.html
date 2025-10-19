@@ -1,0 +1,46 @@
+{% extends 'core/base.html' %}
+{% block title %}إنشاء حساب{% endblock %}
+{% block content %}
+<div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow">
+  <h1 class="text-xl font-semibold mb-4">إنشاء حساب طالب</h1>
+  <form method="post" class="grid grid-cols-1 gap-4">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+
+    <div>
+      <label class="block mb-1">اسم المستخدم</label>
+      {{ form.username }}
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      <div>
+        <label class="block mb-1">الاسم</label>
+        {{ form.first_name }}
+      </div>
+      <div>
+        <label class="block mb-1">اللقب</label>
+        {{ form.last_name }}
+      </div>
+    </div>
+    <div>
+      <label class="block mb-1">رقم الطالب</label>
+      {{ form.student_id }}
+    </div>
+    <div>
+      <label class="block mb-1">الصف</label>
+      {{ form.classroom }}
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      <div>
+        <label class="block mb-1">كلمة المرور</label>
+        {{ form.password1 }}
+      </div>
+      <div>
+        <label class="block mb-1">تأكيد كلمة المرور</label>
+        {{ form.password2 }}
+      </div>
+    </div>
+
+    <button class="w-full bg-blue-600 text-white py-2 rounded">إنشاء الحساب</button>
+  </form>
+</div>
+{% endblock %}

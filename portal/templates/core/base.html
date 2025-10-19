@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}بوابة المدرسة{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen bg-gray-50 text-gray-900">
+    <nav class="bg-white border-b border-gray-200">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="/" class="font-semibold">بوابة المدرسة</a>
+        <div class="flex items-center gap-4">
+          {% if user.is_authenticated %}
+            <span class="text-sm">مرحباً، {{ user.get_full_name|default:user.username }}</span>
+            <a href="{% url 'logout' %}" class="text-red-600 hover:underline">تسجيل الخروج</a>
+          {% else %}
+            <a href="{% url 'login' %}" class="hover:underline">تسجيل الدخول</a>
+            <a href="{% url 'signup' %}" class="hover:underline">إنشاء حساب</a>
+          {% endif %}
+        </div>
+      </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-4 py-6">
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>
